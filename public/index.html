@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentient Africa Inc</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+      :root {
+        --primary: #1a50f0;
+        --dark: #0f1722;
+        --pink-bg: #fecde0;
+        --pink-text: #661f37;
+        --white: #ffffff;
+        --grey: #5f718f;
+        --muted: #7d848c;
+        --bg-grey: #eff2f7;
+      }
+
+      /* ====================
+        CSS RESET
+=======================*/
+
+      /* Box sizing rules */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Remove default padding */
+      ul[class],
+      ol[class] {
+        padding: 0;
+      }
+
+      /* Remove default margin */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul[class],
+      ol[class],
+      li,
+      figure,
+      figcaption,
+      blockquote,
+      dl,
+      dd {
+        margin: 0;
+      }
+
+      /* Set core body defaults */
+      body {
+        min-height: 100vh;
+        scroll-behavior: smooth;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+        font-family: "VT323", monospace;
+        background: var(--bg-grey);
+        transition: all 0.2s ease-in-out;
+      }
+
+      /* Remove list styles on ul, ol elements with a class attribute */
+      ul[class],
+      ol[class] {
+        list-style: none;
+      }
+
+      /* A elements that don't have a class get default styles */
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+      }
+
+      /* Make images easier to work with */
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* Natural flow and rhythm in articles by default */
+      article > * + * {
+        margin-top: 1em;
+      }
+
+      /* Inherit fonts for inputs and buttons */
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      /* Remove all animations and transitions for people that prefer not to see them */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ====================
+        CUSTOM STYLING
+=======================*/
+      .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 70px;
+        background: var(--dark);
+        color: var(--white);
+      }
+
+      .brand a {
+        color: var(--white);
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 20px;
+      }
+
+      .burger a {
+        color: var(--grey);
+        font-size: 20px;
+        margin-left: 10px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .burger a:hover {
+        color: #f4b400;
+      }
+
+      .main {
+        height: calc(100vh - 140px);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: var(--dark);
+        border-radius: 0 0 20px 20px;
+      }
+
+      .main .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        min-width: 80%;
+      }
+
+      .mid {
+        margin-top: -100px;
+      }
+
+      .mid h1 {
+        color: var(--pink-bg);
+        font-size: 100px;
+      }
+
+      .mid p {
+        color: var(--pink-bg);
+        font-size: 20px;
+      }
+
+      .mid p span {
+        color: #f4b400;
+      }
+
+      .footer {
+        max-height: 70px;
+        background: var(--bg-grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+      }
+
+      .footer p {
+        color: var(--grey);
+      }
+
+      .footer p span {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <a href="logo"> Sentient Africa, Inc </a>
+      </div>
+      <div class="burger">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="mid">
+          <h1>Corders @ Work</h1>
+          <p>-- Coming <span>very</span> Soon --</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">
+        &copy; <span id="year"></span> Sentient Africa, Inc. Made with 💖 in
+        <span>Nairobi</span>
+      </p>
+    </footer>
+    <script>
+      // Copyright Year
+      const year = document.querySelector("#year");
+      year.textContent = new Date().getFullYear();
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+  </body>
+</html>
